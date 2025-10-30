@@ -8,11 +8,13 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
     {
-      "src": "/.*",
+      "src": "^/(.*)$",
       "dest": "/index.html"
     }
+  ],
+  "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
