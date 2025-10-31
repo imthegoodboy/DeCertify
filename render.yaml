@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: decertify
+    env: node
+    plan: free
+    rootDir: ./
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+    healthCheckPath: /
+
